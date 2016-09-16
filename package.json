@@ -1,0 +1,19 @@
+{
+  "name": "redash",
+  "version": "1.0.0",
+  "description": "A dashboard for RethinkDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sxw1212/ReDash.git"
+  },
+  "author": "Sam Mauldin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sxw1212/ReDash/issues"
+  },
+  "homepage": "https://github.com/Sxw1212/ReDash#readme"
+}
