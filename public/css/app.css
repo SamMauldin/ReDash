@@ -1,0 +1,29 @@
+.nav {
+  background-color: #93b7be;
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 3em;
+}
+
+.navspace {
+  height: 3em;
+  background-color: #93b7be;
+}
+
+html {
+  background-color: #f1fffa;
+}
+
+.appContainer {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.appLoadingPanel {
+  margin-top: 1em;
+}
+
+.appLoginPanel {
+  margin-top: 1em;
+}
