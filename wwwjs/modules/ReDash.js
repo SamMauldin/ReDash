@@ -23,22 +23,45 @@ export default React.createClass({
     };
   },
 
+  getInitialState: function() {
+      return {
+        session: {
+          authenticated: false
+        }
+      }
+  },
+
   // Connect to the Socket.IO Server when this component is mounted
   componentDidMount: function() {
 
     // Go to login page whenever there's a new socket connection
     this.props.socket.on("reconnect", () => {
       browserHistory.push("/login");
+      this.setState({
+        session: {
+          authenticated: false
+        }
+      });
     });
 
     this.props.socket.on("connect", () => {
       browserHistory.push("/login");
+      this.setState({
+        session: {
+          authenticated: false
+        }
+      });
     });
 
     // TODO: Navigate to previous page when logged in
 
     this.props.socket.on("login", () => {
       browserHistory.push("/app");
+      this.setState({
+        session: {
+          authenticated: true
+        }
+      });
     });
 
   },
@@ -47,7 +70,7 @@ export default React.createClass({
   getChildContext: function() {
     return {
       socket: this.props.socket,
-      session: (this.state ? this.state.session : null)
+      session: this.state.session
     };
   },
 

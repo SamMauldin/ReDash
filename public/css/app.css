@@ -4,6 +4,13 @@
   padding-left: 1em;
   padding-right: 1em;
   height: 3em;
+  position: relative;
+}
+
+.nav-status {
+  position: absolute;
+  right: 3em;
+  top: .4em;
 }
 
 .navspace {
