@@ -35,7 +35,11 @@ export default React.createClass({
       browserHistory.push("/login");
     });
 
-    // TODO: Navigate to app page when login succeeded
+    // TODO: Navigate to previous page when logged in
+
+    this.props.socket.on("login", () => {
+      browserHistory.push("/app");
+    });
 
   },
 
