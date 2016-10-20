@@ -25,6 +25,7 @@
     "react": "15.3.x",
     "react-dom": "15.3.x",
     "react-router": "2.8.x",
+    "rethinkdbdash": "2.3.23",
     "socket.io": "1.4.x",
     "style-loader": "0.13.x",
     "uikit": "^2.27.x"

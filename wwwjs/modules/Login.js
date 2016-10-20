@@ -34,13 +34,27 @@ export default React.createClass({
     let self = this;
 
     // Socket.io reassigns `this`, so we have to bind `this` to `self`
-    this.context.socket.on("login failed", () => {
+    this.context.socket.on("login", args => {
+      // TODO: Unmount the listeners without unmounting other component's listeners
+      if (!this.isMounted()) { return; }
 
+      if (args.status !== "success") {
+        self.setState({
+          submitted: false,
+          loginFailed: true
+        });
+      }
+
+    });
+
+    this.context.socket.on("reconnect", () => {
+      // TODO: Unmount the listeners without unmounting other component's listeners
+      if (!this.isMounted()) { return; }
+      
       self.setState({
         submitted: false,
-        loginFailed: true
+        loginFailed: false
       });
-
     });
   },
 

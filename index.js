@@ -16,6 +16,8 @@ const Socket = require("./lib/socket");
 
 const socket = new Socket(server);
 
+const db = require("./lib/db");
+
 app.use(express.static("public"));
 
 app.get("*", function (req, res) {
