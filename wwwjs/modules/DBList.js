@@ -18,7 +18,8 @@ export default React.createClass({
   },
 
   contextTypes: {
-    socket: React.PropTypes.object
+    socket: React.PropTypes.object,
+    session: React.PropTypes.object
   },
 
   getInitialState: function() {
@@ -30,10 +31,14 @@ export default React.createClass({
   componentDidMount: function() {
     let self = this;
 
+    if (this.context.session.authenticated) {
+      this.context.socket.emit("db list");
+    }
+
     // Socket.io reassigns `this`, so we have to bind `this` to `self`
     this.context.socket.on("login", args => {
       if (!this.isMounted()) { return; }
-      
+
       this.context.socket.emit("db list");
     });
 

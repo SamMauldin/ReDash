@@ -36,32 +36,32 @@ export default React.createClass({
 
     // Go to login page whenever there's a new socket connection
     this.props.socket.on("reconnect", () => {
-      browserHistory.push("/login");
       this.setState({
         session: {
           authenticated: false
         }
       });
+      browserHistory.push("/login");
     });
 
     this.props.socket.on("connect", () => {
-      browserHistory.push("/login");
       this.setState({
         session: {
           authenticated: false
         }
       });
+      browserHistory.push("/login");
     });
 
     // TODO: Navigate to previous page when logged in
 
     this.props.socket.on("login", () => {
-      browserHistory.push("/app");
       this.setState({
         session: {
           authenticated: true
         }
       });
+      browserHistory.push("/app");
     });
 
   },
