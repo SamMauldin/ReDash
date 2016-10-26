@@ -23,7 +23,7 @@ export default React.createClass({
 
   statusDescriptions: function() {
     if (this.state.status) {
-      return this.state.status.messages;
+      return this.state.status.messages.length > 0 ? this.state.status.messages : ["No issues"];
     } else {
       return ["Loading"];
     }
