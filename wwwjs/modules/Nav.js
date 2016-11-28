@@ -7,8 +7,6 @@ export default React.createClass({
     return (<div>
       <div className="nav">
         <h1>ReDash</h1>
-
-        <Status></Status>
       </div>
 
       <div className="navSpace"></div>

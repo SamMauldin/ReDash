@@ -7,7 +7,19 @@
   position: relative;
 }
 
-.nav-status {
+.dbnav {
+  border-top:3px;
+  border-top-color: black;
+  background-color: #93b7be;
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  height: 3em;
+  position: relative;
+}
+
+
+.nav-right {
   position: absolute;
   right: 3em;
   top: .4em;
@@ -16,6 +28,19 @@
 .navspace {
   height: 3em;
   background-color: #93b7be;
+}
+
+.dbnavspace {
+  height: 3em;
+  background-color: #93b7be;
+}
+
+.cluster-button {
+  margin-left: .5em;
+}
+
+.database-button {
+  margin-left: .5em;
 }
 
 html {

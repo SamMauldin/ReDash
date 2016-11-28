@@ -2,23 +2,19 @@ import React from "react";
 
 export default React.createClass({
   render: function() {
-    if (this.context.session.authenticated) {
-      return (<div data-uk-dropdown className="uk-button-dropdown nav-status">
-        <button className={this.statusClasses()}>{this.statusMessage()}</button>
+    return (<div data-uk-dropdown className="uk-button-dropdown">
+      <button className={this.statusClasses()}>{this.statusMessage()}</button>
 
-        <div className="uk-dropdown uk-dropdown-bottom">
-          <ul className="uk-nav uk-nav-dropdown">
-            {this.statusDescriptions().map(function(listValue, listKey){
-              return <li key={listKey}>
-                  <a href="#">{listValue}</a>
-                </li>;
-            })}
-          </ul>
-        </div>
-      </div>);
-    } else {
-      return null;
-    }
+      <div className="uk-dropdown uk-dropdown-bottom">
+        <ul className="uk-nav uk-nav-dropdown">
+          {this.statusDescriptions().map(function(listValue, listKey){
+            return <li key={listKey}>
+                <a href="#">{listValue}</a>
+              </li>;
+          })}
+        </ul>
+      </div>
+    </div>);
   },
 
   statusDescriptions: function() {
@@ -57,7 +53,6 @@ export default React.createClass({
       color = "uk-button-primary";
     }
 
-    console.log(color);
     return "uk-button " + color;
   },
 
@@ -77,8 +72,6 @@ export default React.createClass({
       this.setState({
         status: message
       });
-
-      console.log(message);
     });
 
 

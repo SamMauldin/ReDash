@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "./Nav";
+import DBNav from "./DBNav";
 import { browserHistory } from "react-router";
 import IO from "socket.io-client";
 
@@ -9,6 +10,7 @@ export default React.createClass({
   render: function() {
     return (<div>
       <Nav></Nav>
+      <DBNav></DBNav>
 
       <div className="appContainer">
         {this.props.children}
