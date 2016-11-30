@@ -21,7 +21,7 @@ export default React.createClass({
               <ul className="uk-nav uk-nav-dropdown">
                 {this.state.databases.map(function(listValue, listKey){
                   return <li key={listKey}>
-                      <a href="#">{listValue}</a>
+                      <Link to={`/app/db/${listValue}`}>{listValue}</Link>
                     </li>;
                 })}
               </ul>
