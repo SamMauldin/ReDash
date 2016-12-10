@@ -27,6 +27,7 @@
     "react-router": "2.8.x",
     "rethinkdbdash": "2.3.23",
     "socket.io": "1.4.x",
+    "socket.io-client": "1.7.x",
     "style-loader": "0.13.x",
     "uikit": "^2.27.x"
   },
